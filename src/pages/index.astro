@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import FeaturesGrid from "../components/FeaturesGrid";
+import Pricing from "../components/Pricing";
+import Footer from "../components/Footer";
+---
+
+<Layout title="DanceFlow - La plataforma para academias de baile">
+    <Navbar client:load />
+
+    <main>
+        <Hero client:load />
+        <FeaturesGrid client:visible />
+        <Pricing client:visible />
+    </main>
+
+    <Footer client:visible />
+</Layout>
