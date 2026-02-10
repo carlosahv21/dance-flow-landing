@@ -1,15 +1,28 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Pricing = () => {
     return (
-        <section className="py-32 relative" id="pricing">
+        <section className="py-20 relative" id="pricing">
             <div className="max-w-7xl mx-auto px-6">
-                <div className="text-center mb-20">
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true }}
+                    className="text-center mb-20"
+                >
                     <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Planes para cada etapa</h2>
                     <p className="text-slate-400 text-lg">Escala tu academia sin complicaciones técnicas.</p>
-                </div>
+                </motion.div>
                 <div className="grid md:grid-cols-3 gap-8">
-                    <div className="p-10 rounded-3xl glass-card flex flex-col">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0 }}
+                        viewport={{ once: true }}
+                        className="p-10 rounded-3xl glass-card flex flex-col"
+                    >
                         <h3 className="text-xl font-bold mb-2 text-white">Free</h3>
                         <div className="flex items-baseline gap-1 mb-8">
                             <span className="text-5xl font-black text-white">$0</span>
@@ -30,8 +43,14 @@ const Pricing = () => {
                         <button className="w-full py-4 rounded-2xl border border-border-base hover:bg-white/5 transition-colors font-bold text-sm text-white">
                             Empezar Gratis
                         </button>
-                    </div>
-                    <div className="p-10 rounded-3xl bg-container-dark border-2 border-primary-blue relative flex flex-col shadow-[0_0_40px_rgba(10,132,255,0.1)]">
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                        viewport={{ once: true }}
+                        className="p-10 rounded-3xl bg-container-dark border-2 border-primary-blue relative flex flex-col shadow-[0_0_40px_rgba(10,132,255,0.1)]"
+                    >
                         <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary-blue text-white text-[9px] font-black px-5 py-1.5 rounded-full tracking-widest">MÁS POPULAR</div>
                         <h3 className="text-xl font-bold mb-2 text-white">Growth</h3>
                         <div className="flex items-baseline gap-1 mb-8">
@@ -56,8 +75,14 @@ const Pricing = () => {
                         <button className="w-full py-4 rounded-2xl bg-primary-blue hover:brightness-110 transition-all font-bold text-sm text-white shadow-lg shadow-primary-blue/20">
                             Prueba 14 Días Gratis
                         </button>
-                    </div>
-                    <div className="p-10 rounded-3xl glass-card flex flex-col">
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        viewport={{ once: true }}
+                        className="p-10 rounded-3xl glass-card flex flex-col"
+                    >
                         <h3 className="text-xl font-bold mb-2 text-white">Enterprise</h3>
                         <div className="flex items-baseline gap-1 mb-8">
                             <span className="text-5xl font-black text-white">$49</span>
@@ -81,7 +106,7 @@ const Pricing = () => {
                         <button className="w-full py-4 rounded-2xl border border-border-base hover:bg-white/5 transition-colors font-bold text-sm text-white">
                             Contactar Ventas
                         </button>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>
