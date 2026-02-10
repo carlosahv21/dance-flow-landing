@@ -20,13 +20,14 @@ const SuccessFeatures = () => {
                             Funciones diseñadas para el <span className="text-primary-blue">éxito</span>
                         </h2>
                         <p className="text-slate-400 text-lg leading-relaxed mb-8">
-                            No somos solo un CRM. Somos el copiloto tecnológico que permite que te enfoques en el arte mientras nosotros nos encargamos de los procesos.
+                            Más que un CRM, somos tu copiloto tecnológico. Tú te enfocas en el arte, nosotros en los procesos.
                         </p>
                         <ul className="space-y-4">
                             {[
-                                'Cobros automáticos y facturación integrada para evitar retrasos y filas en recepción',
-                                'Análisis inteligente basado en datos reales sobre el crecimiento técnico de cada bailarín',
-                                'Portal dedicado para comunicación directa, descarga de recibos y seguimiento pedagógico'
+                                'Digitaliza tu cobranza y genera recibos automáticos. Mantén el historial de pagos organizado sin depender de cuadernos o WhatsApp.',
+                                'Transforma el esfuerzo en métricas. Análisis de crecimiento técnico para que cada bailarín visualice su progreso y se mantenga motivado.',
+                                'Tu propia App de comunicación y gestión. Centraliza recibos, avisos y seguimiento para proyectar una imagen profesional.',
+                                'Gestiona desde cualquier lugar con nuestra App nativa para iOS y Android'
                             ].map((item, index) => (
                                 <motion.li
                                     key={index}

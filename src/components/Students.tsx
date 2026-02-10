@@ -20,14 +20,14 @@ const Students = () => {
                             Conoce a tus <span className="text-primary-blue">estudiantes</span>
                         </h2>
                         <p className="text-slate-400 text-lg leading-relaxed mb-8">
-                            Accede a la información completa de cada alumno: historial de pagos, asistencia, nivel técnico y observaciones de los profesores.
+                            Accede a la información completa de cada alumno: pagos, asistencia y nivel técnico. Todo el seguimiento pedagógico en un solo perfil.
                         </p>
                         <ul className="space-y-4">
                             {[
                                 'Perfiles detallados con historial',
-                                'Seguimiento de asistencia en tiempo real',
+                                'Asistencia en tiempo real',
                                 'Alertas de pagos pendientes',
-                                'Comunicación integrada vía WhatsApp'
+                                'Comunicación vía WhatsApp'
                             ].map((item, index) => (
                                 <motion.li
                                     key={index}

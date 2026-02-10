@@ -11,7 +11,7 @@ const Footer = () => {
                             <span className="text-2xl font-bold tracking-tighter text-white">DanceFlow</span>
                         </div>
                         <p className="text-slate-500 max-w-sm mb-10 leading-relaxed font-light">
-                            Redefiniendo la administración de las artes escénicas a través de datos y una experiencia de usuario premium.
+                            El copiloto tecnológico de las artes escénicas. Ayudamos a directores a digitalizar su pasión con datos y simplicidad.
                         </p>
                         <div className="flex gap-4">
                             <a className="w-11 h-11 rounded-full bg-container-dark border border-border-base flex items-center justify-center hover:border-primary-blue transition-colors" href="#">
@@ -25,10 +25,9 @@ const Footer = () => {
                     <div>
                         <h5 className="font-bold text-white mb-8 tracking-tight">Producto</h5>
                         <ul className="space-y-4 text-sm text-slate-500 font-light">
-                            <li><a className="hover:text-white transition-colors" href="#">Funciones</a></li>
-                            <li><a className="hover:text-white transition-colors" href="#">Precios</a></li>
-                            <li><a className="hover:text-white transition-colors" href="#">Reportes IA</a></li>
-                            <li><a className="hover:text-white transition-colors" href="#">Móvil App</a></li>
+                            <li><a className="hover:text-white transition-colors cursor-pointer" onClick={(e) => { e.preventDefault(); document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' }); }}>Funciones</a></li>
+                            <li><a className="hover:text-white transition-colors cursor-pointer" onClick={(e) => { e.preventDefault(); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }}>Precios</a></li>
+                            <li><a className="hover:text-white transition-colors cursor-pointer" href="#">Próximamente</a></li>
                         </ul>
                     </div>
                     <div>
@@ -42,7 +41,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="pt-10 border-t border-border-base flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] font-bold text-slate-600 uppercase tracking-widest">
-                    <p>© 2024 DanceFlow Inc. Todos los derechos reservados.</p>
+                    <p>© {new Date().getFullYear()} DanceFlow. Todos los derechos reservados.</p>
                     <div className="flex gap-8">
                         <a className="hover:text-slate-300 transition-colors" href="#">Términos</a>
                         <a className="hover:text-slate-300 transition-colors" href="#">Cookies</a>

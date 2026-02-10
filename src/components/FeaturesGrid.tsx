@@ -6,17 +6,17 @@ const FeaturesGrid = () => {
         {
             icon: 'trending_down',
             title: 'Fuga de Capital',
-            description: 'Controla cada centavo y evita que las mensualidades vencidas afecten tu flujo de caja de forma silenciosa.'
+            description: 'Controla cada centavo y evita que las mensualidades vencidas afecten tu flujo de caja de forma silenciosa. Evita que la morosidad invisible drene la rentabilidad de tu salón.'
         },
         {
             icon: 'person_off',
             title: 'Deserción de Alumnos',
-            description: 'Detecta la falta de asistencia a tiempo y mantén a tus estudiantes motivados con seguimiento personalizado.'
+            description: 'Anticípate al abandono. Identifica alumnos en riesgo y motívalos mostrando su progreso real, antes de que dejen de asistir.'
         },
         {
             icon: 'layers',
             title: 'Caos Operativo',
-            description: 'Deja de usar planillas infinitas. Organiza horarios, profesores y salones en una interfaz simple y veloz.'
+            description: 'Cambia el caos de los cuadernos y grupos de WhatsApp por un centro de mando digital. Gestiona horarios y salones en segundos.'
         }
     ];
 

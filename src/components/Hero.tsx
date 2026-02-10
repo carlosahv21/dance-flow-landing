@@ -13,16 +13,18 @@ const Hero = () => {
                     className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-container-dark border border-border-base text-slate-300 text-[11px] font-bold mb-8 uppercase tracking-widest"
                 >
                     <span className="flex h-1.5 w-1.5 rounded-full bg-primary-blue animate-pulse"></span>
-                    Versión 1.0.0 disponible
+                    Versión 1.0 disponible
                 </motion.div>
+
                 <motion.h1
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.1 }}
-                    className="text-5xl md:text-8xl font-black mb-8 max-w-5xl mx-auto leading-[0.95] text-white"
+                    className="text-5xl md:text-7xl font-black mb-8 max-w-5xl mx-auto leading-[0.95] text-white"
                 >
                     La tecnología que hace <span className="text-transparent bg-primary-blue bg-clip-text">crecer</span> tu academia
                 </motion.h1>
+
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -31,20 +33,34 @@ const Hero = () => {
                 >
                     Automatiza pagos, gestiona alumnos y profesionaliza tu escuela de baile con la plataforma premium líder diseñada para el éxito operativo.
                 </motion.p>
+
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
-                    className="flex flex-col sm:flex-row items-center justify-center gap-4"
+                    className="flex flex-col items-center gap-6"
                 >
-                    <button className="w-full sm:w-auto bg-primary-blue text-white text-base font-bold px-10 py-4 rounded-full hover:scale-105 transition-transform shadow-lg shadow-primary-blue/10">
-                        Comenzar Ahora — Es gratis
-                    </button>
-                    <button className="w-full sm:w-auto bg-container-dark border border-border-base text-white text-base font-bold px-10 py-4 rounded-full hover:bg-white/5 transition-colors flex items-center justify-center gap-2">
-                        <span className="material-symbols-outlined">play_circle</span>
-                        Ver Demo
-                    </button>
+                    {/* Botones de Acción */}
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
+                        <button className="w-full sm:w-auto bg-primary-blue text-white text-base font-bold px-10 py-4 rounded-full hover:scale-105 transition-transform shadow-lg shadow-primary-blue/10">
+                            Comenzar Ahora — Es gratis
+                        </button>
+                        <button className="w-full sm:w-auto bg-container-dark border border-border-base text-white text-base font-bold px-10 py-4 rounded-full hover:bg-white/5 transition-colors flex items-center justify-center gap-2">
+                            <span className="material-symbols-outlined">play_circle</span>
+                            Ver Demo
+                        </button>
+                    </div>
+
+                    {/* Sub-headline de Disponibilidad */}
+                    <div className="flex items-center gap-3 text-slate-500">
+                        <span className="text-sm font-medium tracking-wide">Disponible en Web, iOS y Android</span>
+                        <div className="flex gap-2 opacity-70">
+                            <span className="material-symbols-outlined text-[18px]">laptop_mac</span>
+                            <span className="material-symbols-outlined text-[18px]">smartphone</span>
+                        </div>
+                    </div>
                 </motion.div>
+
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}

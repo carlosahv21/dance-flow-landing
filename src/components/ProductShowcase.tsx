@@ -11,7 +11,7 @@ const ProductShowcase = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
-                        className="relative group"
+                        className="relative group order-2 lg:order-1"
                     >
                         <div className="absolute inset-0 bg-primary-blue/20 blur-[100px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         <div className="relative rounded-[2.5rem]">
@@ -27,6 +27,7 @@ const ProductShowcase = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
+                        className="order-1 lg:order-2"
                     >
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-blue/10 border border-primary-blue/20 text-primary-blue text-xs font-bold mb-6 uppercase tracking-wider">
                             <span className="material-symbols-outlined text-base">calendar_month</span>
@@ -36,7 +37,7 @@ const ProductShowcase = () => {
                             Tu agenda, <span className="text-primary-blue">bajo control</span>
                         </h2>
                         <p className="text-slate-400 text-lg leading-relaxed mb-8">
-                            Visualiza todas tus clases, horarios y profesores en un solo lugar. Detecta conflictos de horarios automáticamente y optimiza la ocupación de tus salones.
+                            Visualiza clases, horarios y profesores en un solo lugar. Detecta conflictos automáticamente y optimiza la ocupación de tus salones.
                         </p>
                         <ul className="space-y-4">
                             {[
