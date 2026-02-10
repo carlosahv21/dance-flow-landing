@@ -31,7 +31,7 @@ export default function Navbar() {
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="bg-primary hover:bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:shadow-[0_0_20px_rgba(10,132,255,0.5)] transition-shadow duration-300"
+                            className="bg-primary-blue text-white text-sm px-4 py-2 rounded-full hover:scale-105 transition-transform shadow-lg shadow-primary-blue/10"
                         >
                             Comenzar Ahora
                         </motion.button>
@@ -64,7 +64,7 @@ export default function Navbar() {
                             <button onClick={(e) => { e.preventDefault(); setIsOpen(false); document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' }); }} className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium text-left w-full">Testimonios</button>
                             <div className="pt-4 flex flex-col space-y-3">
                                 <a href="#" className="text-center text-gray-300 hover:text-white font-medium">Log In</a>
-                                <button className="w-full bg-primary text-white px-4 py-2 rounded-full font-medium">
+                                <button className="w-full sm:w-auto bg-primary-blue text-white text-base font-bold px-10 py-4 rounded-full hover:scale-105 transition-transform shadow-lg shadow-primary-blue/10">
                                     Comenzar Ahora
                                 </button>
                             </div>

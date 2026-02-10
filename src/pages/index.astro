@@ -2,17 +2,23 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
+import SuccessFeatures from "../components/SuccessFeatures";
+import ProductShowcase from "../components/ProductShowcase";
 import FeaturesGrid from "../components/FeaturesGrid";
+import Students from "../components/Students";
 import Pricing from "../components/Pricing";
 import Footer from "../components/Footer";
 ---
 
-<Layout title="DanceFlow - La plataforma para academias de baile">
+<Layout title="DanceFlow | Gestión Inteligente para Academias de Baile">
     <Navbar client:load />
 
     <main>
         <Hero client:load />
         <FeaturesGrid client:visible />
+        <SuccessFeatures client:visible />
+        <ProductShowcase client:visible />
+        <Students client:visible />
         <Pricing client:visible />
     </main>
 

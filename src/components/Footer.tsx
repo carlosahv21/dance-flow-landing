@@ -1,73 +1,57 @@
 import React from 'react';
-import { Facebook, Instagram, Twitter, Mail } from 'lucide-react';
 
-export default function Footer() {
+const Footer = () => {
     return (
-        <footer className="bg-black border-t border-white/10 pt-16 pb-8">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-                    <div className="col-span-1 md:col-span-1">
-                        <div className="flex items-center mb-4">
-                            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-400">
-                                DanceFlow
-                            </span>
+        <footer className="py-24 border-t border-border-base bg-[#0D0D0D]">
+            <div className="max-w-7xl mx-auto px-6">
+                <div className="grid md:grid-cols-4 gap-16 mb-20">
+                    <div className="col-span-1 md:col-span-2">
+                        <div className="flex items-center gap-2 mb-8">
+                            <span className="material-symbols-outlined text-primary-blue text-3xl">electric_bolt</span>
+                            <span className="text-2xl font-bold tracking-tighter text-white">DanceFlow</span>
                         </div>
-                        <p className="text-gray-500 text-sm leading-relaxed">
+                        <p className="text-slate-500 max-w-sm mb-10 leading-relaxed font-light">
                             Redefiniendo la administración de las artes escénicas a través de datos y una experiencia de usuario premium.
                         </p>
-                    </div>
-
-                    <div>
-                        <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Producto</h4>
-                        <ul className="space-y-2 text-sm text-gray-500">
-                            <li><a href="#" className="hover:text-primary transition-colors">Funciones</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Precios</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Roadmap</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Móvil App</a></li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Compañía</h4>
-                        <ul className="space-y-2 text-sm text-gray-500">
-                            <li><a href="#" className="hover:text-primary transition-colors">Sobre Nosotros</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Blog</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Contacto</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Privacidad</a></li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Contacto</h4>
-                        <ul className="space-y-2 text-sm text-gray-500">
-                            <li className="flex items-center gap-2">
-                                <Mail size={16} /> carfred18@gmail.com
-                            </li>
-                        </ul>
-
-                        <div className="flex space-x-4 mt-6">
-                            <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                                <Facebook size={20} />
+                        <div className="flex gap-4">
+                            <a className="w-11 h-11 rounded-full bg-container-dark border border-border-base flex items-center justify-center hover:border-primary-blue transition-colors" href="#">
+                                <span className="material-symbols-outlined text-xl text-slate-400">public</span>
                             </a>
-                            <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                                <Instagram size={20} />
-                            </a>
-                            <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                                <Twitter size={20} />
+                            <a className="w-11 h-11 rounded-full bg-container-dark border border-border-base flex items-center justify-center hover:border-primary-blue transition-colors" href="#">
+                                <span className="material-symbols-outlined text-xl text-slate-400">alternate_email</span>
                             </a>
                         </div>
                     </div>
+                    <div>
+                        <h5 className="font-bold text-white mb-8 tracking-tight">Producto</h5>
+                        <ul className="space-y-4 text-sm text-slate-500 font-light">
+                            <li><a className="hover:text-white transition-colors" href="#">Funciones</a></li>
+                            <li><a className="hover:text-white transition-colors" href="#">Precios</a></li>
+                            <li><a className="hover:text-white transition-colors" href="#">Reportes IA</a></li>
+                            <li><a className="hover:text-white transition-colors" href="#">Móvil App</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 className="font-bold text-white mb-8 tracking-tight">Compañía</h5>
+                        <ul className="space-y-4 text-sm text-slate-500 font-light">
+                            <li><a className="hover:text-white transition-colors" href="#">Sobre Nosotros</a></li>
+                            <li><a className="hover:text-white transition-colors" href="#">Blog</a></li>
+                            <li><a className="hover:text-white transition-colors" href="#">Contacto</a></li>
+                            <li><a className="hover:text-white transition-colors" href="#">Privacidad</a></li>
+                        </ul>
+                    </div>
                 </div>
-
-                <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600">
-                    <p>&copy; {new Date().getFullYear()} DanceFlow Inc. Todos los derechos reservados.</p>
-                    <div className="flex space-x-6 mt-4 md:mt-0">
-                        <a href="#" className="hover:text-gray-400">Términos</a>
-                        <a href="#" className="hover:text-gray-400">Cookies</a>
-                        <a href="#" className="hover:text-gray-400">Seguridad</a>
+                <div className="pt-10 border-t border-border-base flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] font-bold text-slate-600 uppercase tracking-widest">
+                    <p>© 2024 DanceFlow Inc. Todos los derechos reservados.</p>
+                    <div className="flex gap-8">
+                        <a className="hover:text-slate-300 transition-colors" href="#">Términos</a>
+                        <a className="hover:text-slate-300 transition-colors" href="#">Cookies</a>
+                        <a className="hover:text-slate-300 transition-colors" href="#">Seguridad</a>
                     </div>
                 </div>
             </div>
         </footer>
     );
-}
+};
+
+export default Footer;

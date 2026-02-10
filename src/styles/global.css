@@ -4,15 +4,44 @@
 
 @layer base {
     body {
-        @apply font-sans;
+        @apply bg-bg-dark text-text-base font-sans antialiased;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+        @apply tracking-tighter font-bold;
     }
 }
 
-/* Custom Glow Effects */
-.glow-text {
-    text-shadow: 0 0 20px rgba(10, 132, 255, 0.5);
+.hero-gradient {
+    background: radial-gradient(
+        circle at 50% 50%,
+        rgba(10, 132, 255, 0.08) 0%,
+        rgba(18, 18, 18, 0) 65%
+    );
 }
 
-.glow-box {
-    box-shadow: 0 0 40px -10px rgba(10, 132, 255, 0.3);
+.glass-card {
+    background: #1e1e1e;
+    border: 1px solid #2d2d2d;
+    transition: all 0.2s ease;
+}
+
+.glass-card:hover {
+    border-color: #0a84ff;
+}
+
+.nav-blur {
+    backdrop-filter: blur(12px);
+    background-color: rgba(18, 18, 18, 0.85);
+    border-bottom: 1px solid #2d2d2d;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 300,
+        "GRAD" 0,
+        "opsz" 24;
 }
