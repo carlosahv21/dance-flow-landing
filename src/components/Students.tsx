@@ -53,11 +53,11 @@ const Students = () => {
                         className="relative group"
                     >
                         <div className="absolute inset-0 bg-primary-blue/20 blur-[100px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <div className="relative w-full aspect-video overflow-hidden rounded-[2.5rem]">
+                        <div className="relative overflow-hidden rounded-[2.5rem]">
                             <img
                                 src="/images/students.png"
                                 alt="Directorio de Estudiantes"
-                                className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
+                                className="w-full h-auto block transform transition-transform duration-700 hover:scale-105"
                             />
                         </div>
                     </motion.div>
