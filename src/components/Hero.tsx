@@ -3,11 +3,11 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
     return (
-        <header className="relative pt-32 pb-20 overflow-hidden">
+        <header className="relative pt-32 pb-20 overflow-hidden min-h-[90vh] flex items-center">
             <div className="absolute inset-0 hero-gradient -z-10"></div>
             <div className="max-w-7xl mx-auto px-6 text-center">
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={false}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-container-dark border border-border-base text-slate-300 text-[11px] font-bold mb-8 uppercase tracking-widest"
@@ -17,7 +17,7 @@ const Hero = () => {
                 </motion.div>
 
                 <motion.h1
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={false}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.1 }}
                     className="text-5xl md:text-7xl font-black mb-8 max-w-5xl mx-auto leading-[0.95] text-white"
@@ -26,7 +26,7 @@ const Hero = () => {
                 </motion.h1>
 
                 <motion.p
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={false}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed"
