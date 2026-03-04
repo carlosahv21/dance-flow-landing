@@ -8,6 +8,7 @@ import FeaturesGrid from "../components/FeaturesGrid";
 import Students from "../components/Students";
 import Pricing from "../components/Pricing";
 import Footer from "../components/Footer";
+import ModalManager from "../components/modals/ModalManager";
 ---
 
 <Layout title="DanceFlow | Gestión Inteligente para Academias de Baile">
@@ -23,4 +24,5 @@ import Footer from "../components/Footer";
     </main>
 
     <Footer client:visible />
+    <ModalManager client:load />
 </Layout>

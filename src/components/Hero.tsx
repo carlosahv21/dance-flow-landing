@@ -42,7 +42,10 @@ const Hero = () => {
                 >
                     {/* Botones de Acción */}
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
-                        <button className="w-full sm:w-auto bg-primary-blue text-white text-base font-bold px-10 py-4 rounded-full hover:scale-105 transition-transform shadow-lg shadow-primary-blue/10">
+                        <button
+                            onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
+                            className="w-full sm:w-auto bg-primary-blue text-white text-base font-bold px-10 py-4 rounded-full hover:scale-105 transition-transform shadow-lg shadow-primary-blue/10"
+                        >
                             Comenzar Ahora — Es gratis
                         </button>
                         <button className="w-full sm:w-auto bg-container-dark border border-border-base text-white text-base font-bold px-10 py-4 rounded-full hover:bg-white/5 transition-colors flex items-center justify-center gap-2">

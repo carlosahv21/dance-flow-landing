@@ -1,4 +1,5 @@
 import React from 'react';
+import { useModalStore } from '../store/modalStore';
 
 const Footer = () => {
     return (
@@ -33,19 +34,18 @@ const Footer = () => {
                     <div>
                         <h5 className="font-bold text-white mb-8 tracking-tight">Compañía</h5>
                         <ul className="space-y-4 text-sm text-slate-500 font-light">
-                            <li><a className="hover:text-white transition-colors" href="#">Sobre Nosotros</a></li>
-                            <li><a className="hover:text-white transition-colors" href="#">Blog</a></li>
-                            <li><a className="hover:text-white transition-colors" href="#">Contacto</a></li>
-                            <li><a className="hover:text-white transition-colors" href="#">Privacidad</a></li>
+                            <li><button className="hover:text-white transition-colors text-left" onClick={() => useModalStore.getState().openModal('about')}>Sobre Nosotros</button></li>
+                            <li><button className="hover:text-white transition-colors text-left" onClick={() => useModalStore.getState().openModal('contact')}>Contacto</button></li>
+                            <li><button className="hover:text-white transition-colors text-left" onClick={() => useModalStore.getState().openModal('legal')}>Privacidad</button></li>
                         </ul>
                     </div>
                 </div>
                 <div className="pt-10 border-t border-border-base flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] font-bold text-slate-600 uppercase tracking-widest">
                     <p>© {new Date().getFullYear()} DanceFlow. Todos los derechos reservados.</p>
                     <div className="flex gap-8">
-                        <a className="hover:text-slate-300 transition-colors" href="#">Términos</a>
-                        <a className="hover:text-slate-300 transition-colors" href="#">Cookies</a>
-                        <a className="hover:text-slate-300 transition-colors" href="#">Seguridad</a>
+                        <button className="hover:text-slate-300 transition-colors uppercase" onClick={() => useModalStore.getState().openModal('legal')}>Términos</button>
+                        <button className="hover:text-slate-300 transition-colors uppercase" onClick={() => useModalStore.getState().openModal('legal')}>Cookies</button>
+                        <button className="hover:text-slate-300 transition-colors uppercase" onClick={() => useModalStore.getState().openModal('guarantee')}>Seguridad</button>
                     </div>
                 </div>
             </div>

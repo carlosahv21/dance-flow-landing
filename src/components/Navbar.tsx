@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { useModalStore } from '../store/modalStore';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -21,16 +22,16 @@ export default function Navbar() {
                         <div className="ml-10 flex items-baseline space-x-8">
                             <button onClick={(e) => { e.preventDefault(); document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' }); }} className="text-gray-300 hover:text-white transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium">Funciones</button>
                             <button onClick={(e) => { e.preventDefault(); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }} className="text-gray-300 hover:text-white transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium">Precios</button>
-                            <button onClick={(e) => { e.preventDefault(); document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' }); }} className="text-gray-300 hover:text-white transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium">Testimonios</button>
+                            <button onClick={() => useModalStore.getState().openModal('about')} className="text-gray-300 hover:text-white transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium underline decoration-primary-blue/30 underline-offset-4">Nosotros</button>
                         </div>
                     </div>
 
                     {/* CTA Buttons */}
                     <div className="hidden md:flex items-center space-x-4">
-                        <a href="#" className="text-gray-300 hover:text-white font-medium text-sm">Log In</a>
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
+                            onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
                             className="bg-primary-blue text-white text-sm px-4 py-2 rounded-full hover:scale-105 transition-transform shadow-lg shadow-primary-blue/10"
                         >
                             Comenzar Ahora
@@ -61,10 +62,12 @@ export default function Navbar() {
                         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                             <button onClick={(e) => { e.preventDefault(); setIsOpen(false); document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' }); }} className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium text-left w-full">Funciones</button>
                             <button onClick={(e) => { e.preventDefault(); setIsOpen(false); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }} className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium text-left w-full">Precios</button>
-                            <button onClick={(e) => { e.preventDefault(); setIsOpen(false); document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' }); }} className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium text-left w-full">Testimonios</button>
+                            <button onClick={() => { setIsOpen(false); useModalStore.getState().openModal('about'); }} className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium text-left w-full">Sobre Nosotros</button>
                             <div className="pt-4 flex flex-col space-y-3">
-                                <a href="#" className="text-center text-gray-300 hover:text-white font-medium">Log In</a>
-                                <button className="w-full sm:w-auto bg-primary-blue text-white text-base font-bold px-10 py-4 rounded-full hover:scale-105 transition-transform shadow-lg shadow-primary-blue/10">
+                                <button
+                                    onClick={() => { setIsOpen(false); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }}
+                                    className="w-full sm:w-auto bg-primary-blue text-white text-base font-bold px-10 py-4 rounded-full hover:scale-105 transition-transform shadow-lg shadow-primary-blue/10"
+                                >
                                     Comenzar Ahora
                                 </button>
                             </div>
